@@ -14,6 +14,7 @@ Then you can just use it as a regular React component.
 
 
 # Example
+[Live Demo](https://jsfiddle.net/fj4zv2tn/15/)
 ```js
 import React form 'react';
 import { render } from 'react-dom';
