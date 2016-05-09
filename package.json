@@ -1,0 +1,23 @@
+{
+  "name": "deferedcontainerlist",
+  "version": "0.1.0",
+  "description": "Defer rendering of props changes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KCreate/DeferedContainerList.git"
+  },
+  "keywords": [
+    "React",
+    "Defer"
+  ],
+  "author": "Leonard Schuetz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KCreate/DeferedContainerList/issues"
+  },
+  "homepage": "https://github.com/KCreate/DeferedContainerList#readme"
+}
