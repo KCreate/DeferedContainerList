@@ -1,6 +1,10 @@
-# DeferedContainerList
+# React: DeferedContainerList
 
 Utility component that allows you to defer the rendering of child components. Useful for transitions between pages that might reuse the same components.
+
+# How do i use it?
+
+Install it (Instructions below) and import the component in your app. Also check out the examples inside the examples folder.
 
 # Installation
 ```bash
@@ -27,3 +31,6 @@ render(
     </DeferedContainerList>
 );
 ```
+
+# License
+[MIT](https://github.com/KCreate/DeferedContainerList/blob/master/LICENSE)
