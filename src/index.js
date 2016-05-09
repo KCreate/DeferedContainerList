@@ -6,7 +6,7 @@ class DeferedContainerList extends Component {
 
         // Merge props and state
         this.state = Object.assign({}, this.props, {
-            containerAreHidden: true,
+            applied: true,
         });
     }
 
@@ -14,7 +14,7 @@ class DeferedContainerList extends Component {
 
         // Show the Containers after the component mounted
         this.setState({
-            containerAreHidden: false,
+            applied: false,
         });
     }
 
@@ -22,7 +22,7 @@ class DeferedContainerList extends Component {
 
         // Hide the containers
         this.setState({
-            containerAreHidden: true,
+            applied: true,
         });
 
         // After the specified timeout, change the children
@@ -33,7 +33,9 @@ class DeferedContainerList extends Component {
 
                 // Delay of 20ms to make sure react has finished all of it's DOM operations
                 setTimeout(() => {
-                    this.setState({ containerAreHidden: false });
+                    this.setState({
+                        applied: false,
+                    });
                 }, 20);
             });
         }, this.state.delay);
@@ -43,9 +45,9 @@ class DeferedContainerList extends Component {
 
         // Children with merged style and className props
         const children = React.Children.map(this.state.children, (child, index) => {
-            const hidden = this.state.containerAreHidden;
-            const currentClassName = (hidden ? this.state.hiddenClassName : this.state.activeClassName);
-            const currentStyle = (hidden ? this.state.hiddenStyle : this.state.activeStyle);
+            const applied = this.state.applied;
+            const currentClassName = (applied ? this.state.appliedClassName : this.state.notAppliedClassName);
+            const currentStyle = (applied ? this.state.appliedStyle : this.state.notAppliedStyle);
 
             // Merge old and new style and className props of the component
             const mergedClassName = (child.props.className || '') + ' ' + currentClassName;
@@ -68,10 +70,10 @@ class DeferedContainerList extends Component {
 
 DeferedContainerList.defaultProps = {
     delay: 200,
-    hiddenClassName: '',
-    activeClassName: '',
-    hiddenStyle: {},
-    activeStyle: {},
+    appliedClassName: '',
+    notAppliedClassName: '',
+    appliedStyle: {},
+    notAppliedStyle: {},
 };
 
 export default DeferedContainerList;
