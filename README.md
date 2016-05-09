@@ -12,7 +12,12 @@ npm install deferedcontainerlist -S
 ```
 Then you can just use it as a regular React component.
 
-# Example
+# Usage Example
+
+Below is a little app i threw together to demonstrate a possible use case for this library.
+![](example.gif)
+
+# Code Example
 [Live Demo](https://jsfiddle.net/fj4zv2tn/15/)
 ```js
 import React form 'react';
