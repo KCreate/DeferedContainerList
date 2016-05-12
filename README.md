@@ -37,5 +37,19 @@ render(
 );
 ```
 
+# Important
+If your child component has it's own className, this won't work. DeferedContainerList just passes another className prop to your component so you need to add it manually. Something like that:
+```javascript
+class SomeComponent extends Component {
+    render() {
+        return (
+            <div className={'SomeComponent' + this.props.className}>
+                /* ... */
+            </div>
+        );
+    }
+}
+```
+
 # License
 [MIT](https://github.com/KCreate/DeferedContainerList/blob/master/LICENSE)
