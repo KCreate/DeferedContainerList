@@ -1,6 +1,6 @@
 {
   "name": "deferedcontainerlist",
-  "version": "0.1.1r",
+  "version": "0.1.2",
   "description": "Defer rendering of props changes in React applications",
   "main": "src/index.js",
   "scripts": {

@@ -61,9 +61,11 @@ class DeferedContainerList extends Component {
         });
 
         return (
-            <div>
-                {children}
-            </div>
+            React.createElement(
+                'div',
+                null,
+                children
+            )
         );
     }
 }
