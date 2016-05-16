@@ -45,6 +45,8 @@ class DeferedContainerList extends Component {
 
         // Children with merged style and className props
         const children = React.Children.map(this.state.children, (child, index) => {
+            if (!child || child === null) return undefined;
+
             const applied = this.state.applied;
             const currentClassName = (applied ? this.state.appliedClassName : this.state.notAppliedClassName);
             const currentStyle = (applied ? this.state.appliedStyle : this.state.notAppliedStyle);
